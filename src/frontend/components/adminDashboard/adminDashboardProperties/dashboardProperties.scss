@@ -1,0 +1,26 @@
+@import '../../../styles/general.scss';
+
+.db-properties {
+    &_header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-bottom: 20px;
+        gap: 20px;
+        .balance-info{
+            background-color: $light-grey;
+            border-radius: 7px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 2px 2px 7px rgba(0,0,0,30/100);
+        }
+    }
+    &_table-container{
+        .add-button{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+    }
+}

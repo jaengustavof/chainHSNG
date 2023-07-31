@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ce739885.css",
+    "main.js": "/static/js/main.6201079c.js",
+    "static/media/adminDashboard.webp": "/static/media/adminDashboard.9e27cd8b016ef3edef24.webp",
+    "static/media/House Example 1.png": "/static/media/House Example 1.77df01d60355d5887619.png",
+    "static/media/House Example 5.png": "/static/media/House Example 5.7560941e97263c91ac6e.png",
+    "static/media/House Example 3.png": "/static/media/House Example 3.bb41598450b4ec502390.png",
+    "static/media/House Example 2.png": "/static/media/House Example 2.ba54a4ad613532799ad5.png",
+    "static/media/etienne-beauregard-riverin-B0aCvAVSX8E-unsplash-svg.webp": "/static/media/etienne-beauregard-riverin-B0aCvAVSX8E-unsplash-svg.a68ea2dbf2a5383c07e3.webp",
+    "static/media/House Example 4.png": "/static/media/House Example 4.0364c3cbd77c08ffd262.png",
+    "static/media/trust.webp": "/static/media/trust.7cc5a3989f747749b39d.webp",
+    "static/media/strength.webp": "/static/media/strength.100b44a2975f0350e6b2.webp",
+    "static/media/the-economist.png": "/static/media/the-economist.350a9f3d2b67a2593e08.png",
+    "static/media/entrepreneur.png": "/static/media/entrepreneur.e125f83c1b31c4178000.png",
+    "static/media/forbes.png": "/static/media/forbes.0d936081d57992a76903.png",
+    "static/media/metamaskIcon.png": "/static/media/metamaskIcon.048a764c706e093fa2d4.png",
+    "static/media/bloomberg.png": "/static/media/bloomberg.d4b0e86b2808b4fc9b17.png",
+    "static/media/nytimes.png": "/static/media/nytimes.78b75e1a51d663c6a9f4.png",
+    "static/media/logo.svg": "/static/media/logo.d51e1f22f483c65c631ce455f9366808.svg",
+    "static/media/review1-transformed .webp": "/static/media/review1-transformed .7a6d2cbf40fbf275e1da.webp",
+    "static/media/review2-transformed.webp": "/static/media/review2-transformed.907b1e271fcfaca91fbf.webp",
+    "static/media/Shower.svg": "/static/media/Shower.02487e0e2568f0c52ee313502057ec0d.svg",
+    "static/media/Size.svg": "/static/media/Size.b73d95068201c6c4205ddd0637eea91b.svg",
+    "static/media/review3-transformed.webp": "/static/media/review3-transformed.53ca230d4e2e35e5b225.webp",
+    "static/media/Bed.svg": "/static/media/Bed.b7180ea6aee43da959b330b4745dca79.svg",
+    "index.html": "/index.html",
+    "static/media/whiteArrow.svg": "/static/media/whiteArrow.285a569f4ef74de7730a.svg",
+    "static/media/yellowArrow.svg": "/static/media/yellowArrow.57158c05420f691d2be6.svg",
+    "main.ce739885.css.map": "/static/css/main.ce739885.css.map",
+    "main.6201079c.js.map": "/static/js/main.6201079c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ce739885.css",
+    "static/js/main.6201079c.js"
+  ]
+}

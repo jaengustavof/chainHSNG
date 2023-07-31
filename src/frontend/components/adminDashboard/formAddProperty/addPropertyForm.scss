@@ -1,0 +1,23 @@
+.add-property-form {
+    background-attachment: red;
+    width: 100%;
+    input {
+        width: 100%;
+        margin-bottom: 20px;
+        height: 40px;
+        border-radius: 7px;
+        padding: 5px 10px;
+    }
+    .amenities-container {
+        display: flex;
+        gap: 10px;
+    }
+    .add-property-form-button {
+        background-color: #2e7d32;
+        border: none;
+        color: wheat;
+        font-weight: bold;
+        margin-top: 10px;
+        height: 50px;
+    }
+}

@@ -1,0 +1,65 @@
+@import '../../../styles/general.scss';
+
+.property-form-container_form{
+    width: 35%;
+    background-color: $white;
+    border-radius: 25px;
+    box-shadow: 4px 4px 15px rgba(0,0,0,0.4);   
+    padding: 20px 40px;
+    .rental-price {
+        text-align: right;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: bold;
+        margin-bottom: 40px;
+    }
+    .shares-available {
+        text-align: center;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .MuiBox-root{
+        margin-bottom: 40px;
+        .MuiSlider-root{
+            .MuiSlider-rail{
+                background-color: $orange;
+            }
+            .MuiSlider-track {
+                background-color: $orange;
+            }
+            .MuiSlider-thumb {
+                background-color: $orange;
+            }
+        }
+    }
+    .shares-form{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        select {
+            width: 100%;
+            margin-bottom: 20px;
+            height: 40px;
+            border-radius: 7px;
+            padding: 5px 10px;
+        }
+    }
+    .shares-calc {
+        text-align: right;
+    }
+    .buy-shares-button {
+        width: 100%;
+        margin-bottom: 20px;
+        height: 40px;
+        border-radius: 7px;
+        padding: 5px 10px;
+        background-color: #2e7d32;
+        border: none;
+        color: wheat;
+        font-weight: bold;
+        margin-top: 10px;
+        height: 50px;
+    }
+}

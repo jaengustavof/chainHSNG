@@ -1,0 +1,100 @@
+@import "../../styles/general.scss";
+
+#reviews {
+    .appContainer {
+        padding: 150px 0;
+        .reviews-heading{
+            text-align: center;
+            margin-bottom: 80px;
+        }
+        .carousel-container {
+            width: calc(100% - 130px);
+            margin: auto;
+            overflow: hidden;
+            position: relative;
+            height: 412px;
+            position: relative;
+            .reviews-carousel {
+                width: 100%;
+                margin: auto;
+                display: flex;
+                justify-content: space-between;
+                column-gap: calc((100% - 90%)/2);
+                position: absolute;
+                top: 0;
+                left: 0;
+                transition: 0.5s ease-in-out;
+                .reviews-carrusel_message {
+                    flex-shrink: 0;
+                    width: 30%;
+                    max-width: 336px;
+                    transition: 0.5s;
+                    
+                    .message-text {
+                        font-size: 22px;
+                        line-height: auto;
+                        font-weight: 200;
+                        color: $black;
+                        margin-bottom: 60px;
+                    }
+                    .message-info {
+                        width: 100%;
+                        padding: 15px 40px;
+                        background-color: $black;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        &_img {
+                            width: 60px;
+                            border-radius: 50%;
+                        }
+                        &_client {
+                            width: calc(100% - 60px);
+                            padding-left: 20px;
+                            .client-name {
+                                color: $white;
+                                font-size: 15px;
+                                line-height: 25px;
+                                font-weight: bold;
+                                margin-bottom: 5px;
+                            }
+                            .client-status {
+                                color: $white;
+                                font-size: 15px;
+                                line-height: 25px;
+                                font-weight: 400;
+                            }
+                        }
+                    } 
+                }
+            }       
+        }
+        .carousel-controls {
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &_pagination {
+                width: 50%;
+                max-width: 200px;
+                height: 25%;
+                display: flex;
+                justify-content: space-between;
+                .page {
+                    width: 30%;
+                    height: 100%;
+                    box-sizing: border-box;
+                    background-color: lightgrey;
+                    transition: 0.5s;
+                }
+                .selected {
+                    background-color: $orange;
+                    box-shadow: 4px 4px 7px rgba(0,0,0,0.2);
+                    transition: 0.5s;
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,102 @@
+@import "../../styles/general.scss";
+
+#about-container {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    padding-bottom: 50px;
+    .image-container{
+        width: 50%;
+        .image-container_img {
+            width: 100%;
+            border-radius: 0 57px 0 0;
+            transition: 1s; 
+        }
+        .shadow {
+            box-shadow: 0 30px 54px rgba(0,0,0,0.5);
+            transition: 1s;
+        }
+    }
+    .text-container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        .appContainer {
+            height: 100%;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end;
+            .text-container-info {
+                width: 50%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding-left: 10%;
+                gap: 20px;
+                &_pre {
+                    width: 0%;
+                    height: 4px;
+                    background: linear-gradient(90deg, rgba(255,172,18,1) 0%, rgba(0,0,0,0.8323704481792717) 100%);
+                    transition: 0.5s;
+                }
+                .active {
+                    width: 35%;
+                    transition: 0.5s;
+                }
+                &_text {
+                    width: 100%;
+                    max-width: 420px;
+                    font-size: 1.20rem;
+                    line-height: 1.75rem;
+                    color: $black-light;
+                    margin-bottom: 10px;
+                }
+                &_button {
+                    width: 45%;
+                    height: 70px;
+                    border-radius: 0 18px 0 0 ;
+                    background-color: $black;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    cursor: pointer;
+                    transition: 0.5s;
+                    span {
+                        font-size: 17px;
+                        line-height: 20px;
+                        font-weight: bold;
+                        color: $white;
+                        &::after{
+                            content: url('../../assets/icons/yellowArrow.svg');
+                            width: 10px;
+                            margin-left: 10px;
+                        }   
+                    }
+                    &:hover {
+                        background-color: $white;
+                        color: $black;
+                        transition: 0.5s;
+                        box-shadow: 1px 1px 10px $black;
+                        span {
+                            font-size: 17px;
+                            line-height: 20px;
+                            font-weight: bold;
+                            color: $black;
+                            &::after{
+                                content: url('../../assets/icons/yellowArrow.svg');
+                                width: 10px;
+                                margin-left: 10px;
+                            }   
+                        }
+                    }
+                }
+
+
+            }
+        }
+    }
+}

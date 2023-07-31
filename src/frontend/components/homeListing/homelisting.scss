@@ -1,0 +1,29 @@
+@import "../../styles/general.scss";
+
+#home-listing{
+    width: 100%;
+    background-color: $light-grey;
+    .appContainer {
+        .home-listing{
+            width: 100%;
+            .home-listing-header{
+                width: 100%;
+                &_pre {
+                    width: 0%;
+                    height: 4px;
+                    background: linear-gradient(90deg, rgba(255,172,18,1) 0%, rgba(0,0,0,0.8323704481792717) 100%);
+                    transition: 0.5s;
+                    margin-bottom: 17px;
+                }
+                &_heading {
+                    margin: 50px 0 40px;
+                }
+                .active {
+                    width: 35%;
+                    max-width: 169px;
+                    transition: 0.5s;
+                }
+            }
+        }        
+    }
+}
