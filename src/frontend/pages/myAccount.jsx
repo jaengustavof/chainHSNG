@@ -2,7 +2,7 @@ import React from 'react';
 import Context from '../context';
 import { ethers } from 'ethers';
 import { useState, useEffect, useContext } from 'react';
-import Dashboard from '../components/myAccountDashboard/dashboard';
+import Dashboard from '../components/myAccountDashboard/myAccountDashboard';
 
 const MyAccount = () =>{
 

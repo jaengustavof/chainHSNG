@@ -18,7 +18,7 @@ interface IERC20{
 contract ERC20Basic is IERC20 {
     string public constant name = "CHAINTOKEN";
     string public constant symbol = "CHT";
-    uint8 public constant decimals = 2;
+    uint8 public constant decimals = 18;
     
     event Transfer(address indexed from, address indexed to, uint256 tokens);
     event Approval(address indexed tokenOwner, address indexed spender, uint tokens);

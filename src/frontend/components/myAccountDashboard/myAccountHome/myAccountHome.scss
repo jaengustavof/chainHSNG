@@ -1,0 +1,32 @@
+@import '../../../styles/general.scss';
+
+.ma-home {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    &_address-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &_balance-container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        margin-bottom: 30px;
+        gap: 20px;
+        .balance-info{
+            background-color: $light-grey;
+            border-radius: 7px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 2px 2px 7px rgba(0,0,0,30/100);
+            p {
+                margin: 0;
+            }
+        }
+    }
+    &_property-list{
+        text-align: center;
+    }
+}

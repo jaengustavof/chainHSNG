@@ -7,8 +7,8 @@ import { useState, useEffect, useContext } from 'react';
 import { create as ipfsHttpClient } from 'ipfs-http-client';
 import { ethers } from "ethers";
 
-const projectId = '*********';
-const projectSecret = '*********';
+const projectId = '2SFSUpmPI68xGF8hJbufrqlW1vy';
+const projectSecret = 'a55e8b33848f8f0f0fe6046d9043eb1e';
 const credentials = projectId + ':' + projectSecret;
 const encodedCredentials = btoa(credentials);
 const authHeader = 'Basic ' + encodedCredentials;

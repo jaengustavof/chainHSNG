@@ -1,0 +1,48 @@
+#admin-component {
+    width: 100%;
+    padding: 10px;
+    height: auto;
+    min-height: 100vh;
+    background-image: url('../../assets/imgs/myAccount/myAccount.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 130px 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    .ad-navbar{
+        width: 250px;
+        background-color: whitesmoke;
+        padding: 10px;
+        &_section {
+            width: 100%;
+            padding: 25px 10px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            border-bottom: 1px solid black;
+            cursor: pointer;
+            color: black;
+            background-color: whitesmoke;
+            transition: 0.2s;
+            &:last-child {
+                border-bottom: none;
+            }
+            &:hover {
+                color: whitesmoke;
+                background-color: black;
+                transition: 0.2s;
+            }
+            h5{
+                margin: 0;
+                margin-left: 25px;
+            }
+        }
+        
+    }
+    .ad-container {
+        width: calc(100% - 250px);
+        padding: 20px 10px;
+        background-color: rgba(255,255,255,0.7);
+        border-radius: 0 7px 7px 0;
+    }
+}

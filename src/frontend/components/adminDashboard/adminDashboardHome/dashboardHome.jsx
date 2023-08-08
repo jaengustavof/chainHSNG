@@ -10,7 +10,7 @@ import { PieChart } from '@mui/x-charts/PieChart';
 
 
 const DashboardHome = () => {
-    const [symbol, setSymbol] = useState('');
+    
     const [contractAddress, setContractAddress] = useState('');
 
     const { chainHousing, contractBalance, setContractBalance, tokenBalance, setTokenBalance, propertyList, setPropertyList } = useContext(Context);

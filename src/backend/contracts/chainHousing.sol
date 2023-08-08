@@ -69,7 +69,8 @@ contract chainHousing{
     }
 
     function getContractEthBalance() public view returns (uint256) {
-        return address(this).balance;
+        uint bal = address(this).balance / 1 ether;
+        return bal;
     }
 
     function getClientEthBalance(address _address) public view returns (uint256) {

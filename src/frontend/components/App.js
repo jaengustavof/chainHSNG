@@ -27,8 +27,11 @@ function App() {
   const [chainHousing, setChainHousing] = useState({});
   const [contractBalance, setContractBalance] = useState('');
   const [tokenBalance, setTokenBalance] = useState('');
+  const [userTokenBalance, setUserTokenBalance] = useState(null);
   const [propertyList, setPropertyList] = useState([]);
   const [selectedProperty, setSelectedProperty] = useState();
+  const [tokenPrice, setTokenPrice] = useState();
+  const [contractAddress, setContractAddress] = useState();
 
   const web3Handler = async () => {
 
@@ -47,6 +50,7 @@ function App() {
 
     window.ethereum.on('accountsChanged', async function (accounts) {
       setuserAccount(accounts[0]);
+      console.log(userAccount)
       await web3Handler();
     })
 
@@ -71,7 +75,10 @@ function App() {
                                 contractBalance, setContractBalance,
                                 tokenBalance, setTokenBalance,
                                 propertyList, setPropertyList,
-                                selectedProperty, setSelectedProperty}}>
+                                selectedProperty, setSelectedProperty,
+                                userTokenBalance, setUserTokenBalance,
+                                tokenPrice, setTokenPrice,
+                                contractAddress, setContractAddress}}>
     <BrowserRouter>
         <div className='App'>
           <NavBar web3Handler={web3Handler} account={userAccount} />

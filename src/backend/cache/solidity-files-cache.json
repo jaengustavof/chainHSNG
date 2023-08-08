@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/gustavo/blockchain/chainHousing/src/backend/contracts/chainHousing.sol": {
-      "lastModificationDate": 1690199636033,
-      "contentHash": "5a69983af225d9fc76de0aa2958475f5",
+      "lastModificationDate": 1691516592138,
+      "contentHash": "dbf5f04f86842a7a1cb9b3f481ff1774",
       "sourceName": "src/backend/contracts/chainHousing.sol",
       "solcConfig": {
         "version": "0.8.0",
@@ -39,8 +39,8 @@
       ]
     },
     "/home/gustavo/blockchain/chainHousing/src/backend/contracts/ERC20.sol": {
-      "lastModificationDate": 1690194882609,
-      "contentHash": "506db3432cec8a53ce2403b6d04bf8ec",
+      "lastModificationDate": 1691420173310,
+      "contentHash": "d9337d9a183aa1c2102f207d7d7c619f",
       "sourceName": "src/backend/contracts/ERC20.sol",
       "solcConfig": {
         "version": "0.8.0",
