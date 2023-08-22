@@ -34,7 +34,8 @@
     "sass": "^1.63.6",
     "scss": "^0.2.4",
     "web3": "^4.0.3",
-    "yup": "^1.2.0"
+    "yup": "^1.2.0",
+    "homepage": "."
   },
   "scripts": {
     "start": "react-scripts start",
