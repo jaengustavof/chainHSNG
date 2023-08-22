@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.3988c46b.css",
-    "main.js": "/static/js/main.c3f0e011.js",
+    "main.css": "/static/css/main.feaaf88d.css",
+    "main.js": "/static/js/main.afbbbbcf.js",
     "static/media/myAccount.webp": "/static/media/myAccount.554e07c29cb052b742a2.webp",
     "static/media/adminDashboard.webp": "/static/media/adminDashboard.9e27cd8b016ef3edef24.webp",
     "static/media/etienne-beauregard-riverin-B0aCvAVSX8E-unsplash-svg.webp": "/static/media/etienne-beauregard-riverin-B0aCvAVSX8E-unsplash-svg.a68ea2dbf2a5383c07e3.webp",
@@ -27,11 +27,11 @@
     "static/media/whiteArrow.svg": "/static/media/whiteArrow.285a569f4ef74de7730a.svg",
     "static/media/yellowArrow.svg": "/static/media/yellowArrow.57158c05420f691d2be6.svg",
     "static/media/001-facebook.svg": "/static/media/001-facebook.d3d786ddeb573f4b3fd704a0602254ad.svg",
-    "main.3988c46b.css.map": "/static/css/main.3988c46b.css.map",
-    "main.c3f0e011.js.map": "/static/js/main.c3f0e011.js.map"
+    "main.feaaf88d.css.map": "/static/css/main.feaaf88d.css.map",
+    "main.afbbbbcf.js.map": "/static/js/main.afbbbbcf.js.map"
   },
   "entrypoints": [
-    "static/css/main.3988c46b.css",
-    "static/js/main.c3f0e011.js"
+    "static/css/main.feaaf88d.css",
+    "static/js/main.afbbbbcf.js"
   ]
 }

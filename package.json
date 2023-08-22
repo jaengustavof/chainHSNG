@@ -3,6 +3,7 @@
   "version": "0.2.0",
   "private": false,
   "dependencies": {
+    "source-map-loader": "^1.0.0",
     "@babel/preset-react": "7.16.7",
     "@chainlink/contracts": "0.4.0",
     "@emotion/react": "^11.11.1",
@@ -53,9 +54,11 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "chrome >= 67",
+      "edge >= 79",
+      "firefox >= 68",
+      "opera >= 54",
+      "safari >= 14"
     ],
     "development": [
       "last 1 chrome version",
