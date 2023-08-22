@@ -60,6 +60,10 @@ contract chainHousing{
     //Mapping de registro de clientes
     mapping(address => client) public Clients;
 
+    function getClientProperties (address _addr) public view returns(uint[] memory){
+        return Clients[_addr].propertiesOwned;
+    }
+
     function name() public view returns (string memory){
         return token.name();
     }
@@ -199,7 +203,7 @@ contract chainHousing{
     }
  
     // Comprar una propiedad
-    function buyPorperty(uint _propertyId, uint _shares) public {
+    function buyProperty(uint _propertyId, uint _shares) public {
         // Confirmar que la propiedad existe
         require(checkProperty(_propertyId), "The property ID is incorrect or does note exists");
         //Confirmar que la propiedad est'a disponible
@@ -223,6 +227,7 @@ contract chainHousing{
 
         // Actualizamos el balance del cliente
         Clients[msg.sender].token_balance -= totalAmount;
+        Clients[msg.sender].propertiesOwned.push(_propertyId);
 
         //Si el owner ya no tiene participacion, entonces la propiedad ya no esta a la venta
         if(clientSharesOfProperty[_propertyId][contractOwner] == 0){

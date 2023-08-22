@@ -40,19 +40,16 @@ const TokensBuy = () => {
     }
 
     const onSubmit = (data) => {
-        console.log('ethToChtAmount', ethToChtAmount);
-        console.log('chtToEthAmount', chtToEthAmount)
     }
     
     const buyTokens = async () => {
-        console.log(userAccount)
         try {
             const tokens = chtToEthAmount.toString(); 
             const ethAmountWei = web3.utils.toWei(ethToChtAmount.toString(), 'ether'); 
 
             const gasPrice = await web3.eth.getGasPrice(); // Get the current gas price
             const gasLimit = 300000; // Set an appropriate gas limit
-
+ 
             const contract = new web3.eth.Contract(chainHousingAbi.abi, chainHousingAddress.address);
 
             const transaction = await contract.methods.buyTokens(tokens).send({

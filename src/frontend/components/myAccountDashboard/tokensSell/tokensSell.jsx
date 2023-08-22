@@ -40,17 +40,20 @@ const TokensSell = () => {
     }
 
     const onSubmit = (data) => {
-        console.log('ethToChtAmount', ethToChtAmount);
-        console.log('chtToEthAmount', chtToEthAmount)
+
     };
 
+    
     const sellTokens = async () => {
         
         
         try {
             const tokens = chtToEthAmount.toString();
-            const ethAmountWei = web3.utils.toWei(ethToChtAmount.toString(), 'ether');
-    
+            let ethAmountWei = web3.utils.toWei((ethToChtAmount*0.01), 'ether'); // 1% comision por cambio de tokens
+            console.log(ethAmountWei)
+            ethAmountWei = web3.utils.numberToHex(ethAmountWei)
+            console.log(ethAmountWei)
+            console.log(104940000000000000)
             const gasPrice = await web3.eth.getGasPrice();
             const gasLimit = 300000;
     
@@ -58,12 +61,15 @@ const TokensSell = () => {
     
             const transaction = await contract.methods.sellTokens(tokens).send({
                 from: userAccount,
-                value: ethAmountWei, // Amount to send along with the transaction
+                value: 104940000000000000,
                 gasPrice: gasPrice,
                 gas: gasLimit
+
+                
             });
-    
+            
             let myNewBalance = await chainHousing.myTokens();
+            let userBalance = await chainHousing
             myNewBalance = (+myNewBalance).toFixed();
             console.log('myNewBalance', myNewBalance);
             setUserTokenBalance(myNewBalance);
@@ -101,7 +107,7 @@ const TokensSell = () => {
                 <h5>Rate of Exchange</h5>
                 <p>1 CHT<span> = </span> {(tokenPrice*0.99)} ETH </p>
             </div>
-            <input type="submit" className='submit-button' value="Sell Tokens" onClick={()=> sellTokens(chtToEthAmount)}/>
+            <input type="submit" className='submit-button' value="Sell Tokens" onClick={()=> sellTokens(chtToEthAmount, ethToChtAmount, userAccount)}/>
         </form>
     );
 }

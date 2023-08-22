@@ -15,19 +15,16 @@ import MyAccountTokens from './myAccountTokens/myAccountTokens'
 
 const Dashboard = () => {
 
-  
-
   const [selectedSection, setSelectedSection] =useState(<MyAccountHome/>);
     
-    const sections = {
-        home: <MyAccountHome/>,
-        tokens : <MyAccountTokens/>
-    }
-  
-    const changeSection = (section) => {
-        setSelectedSection(sections[section])
-    }
+  const sections = {
+      home: <MyAccountHome/>,
+      tokens : <MyAccountTokens/>
+  }
 
+  const changeSection = (section) => {
+      setSelectedSection(sections[section])
+  }
 
   return (
     <main id="admin-component">

@@ -1,7 +1,8 @@
 import React from 'react'
+import BuyContainer from '../components/buySection/buyContainer'
 
 export default function Buy() {
   return (
-    <div>buy</div>
+    <BuyContainer></BuyContainer>
   )
 }

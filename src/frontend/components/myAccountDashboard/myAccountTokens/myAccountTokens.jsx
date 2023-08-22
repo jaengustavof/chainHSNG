@@ -15,7 +15,7 @@ const MyAccountTokens = () => {
 
     const loadInfo = async () => {
         let tokenPrice = await chainHousing.getTokenPrice(1);
-        let getUserTokenBalance = await chainHousing.myTokens();
+        let getUserTokenBalance = await chainHousing.connect(userAccount).myTokens();
         getUserTokenBalance = (+getUserTokenBalance).toFixed();
 
         let ethValue = ethers.utils.formatEther(tokenPrice);
@@ -25,7 +25,6 @@ const MyAccountTokens = () => {
 
     useEffect(() => {
         loadInfo();
-        console.log(tokenPrice)
         
     }, []);
 

@@ -17,7 +17,6 @@ const PropertyDetails = () => {
             top: 0,
             behavior: 'smooth',
         });
-        console.log(selectedProperty)
     }, []);
 
     return (
@@ -31,7 +30,7 @@ const PropertyDetails = () => {
                         </div>
                         <div className='header-info_price'>
                             <h2 className='price-tokens'><TokenIcon style={{fontSize: '40px'}}/>{(selectedProperty.price).toString()}</h2>
-                            <p className='price-sqFt'><TokenIcon/> {(selectedProperty.price).toString() / (selectedProperty.m2).toString()} / m2</p>
+                            <p className='price-sqFt'><TokenIcon/> {((selectedProperty.price).toString() / (selectedProperty.m2).toString()).toFixed(2)} / m2</p>
                         </div>
                     </div>
                 </div>

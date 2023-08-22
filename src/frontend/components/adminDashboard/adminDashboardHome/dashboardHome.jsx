@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect, useContext } from 'react';
 import './dashboardHome.scss';
 import Context from '../../../context';
-
+import Web3 from 'web3';
 import ETH from '../../../assets/icons/eth-icon.png';
 import TokenIcon from '@mui/icons-material/Token';
 import PropertiesTable from '../tableProperties/propertiesTable';
@@ -14,15 +14,16 @@ const DashboardHome = () => {
     const [contractAddress, setContractAddress] = useState('');
 
     const { chainHousing, contractBalance, setContractBalance, tokenBalance, setTokenBalance, propertyList, setPropertyList } = useContext(Context);
+    
+    const web3 = new Web3(window.ethereum);
 
     const loadInfo = async () =>{
 
-        let contractBalance = await chainHousing.getContractEthBalance();
         let tokenBalance = await chainHousing.balanceOf();
         let contractAddress = await chainHousing.getContractAddress();
         let property = await chainHousing.getAllProperties();
-            
-        contractBalance = (+contractBalance).toFixed(2);
+        let contractBalance = await web3.eth.getBalance(chainHousing.address)
+        contractBalance = web3.utils.fromWei(contractBalance, 'ether');
         tokenBalance = (+tokenBalance).toFixed(2);
 
         setContractBalance(contractBalance);
@@ -33,7 +34,7 @@ const DashboardHome = () => {
 
     useEffect(() => {
         loadInfo();
-    }, [tokenBalance, propertyList]);
+    }, []);
 
     return (
         <section className="db-home">

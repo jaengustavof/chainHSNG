@@ -50,7 +50,6 @@ function App() {
 
     window.ethereum.on('accountsChanged', async function (accounts) {
       setuserAccount(accounts[0]);
-      console.log(userAccount)
       await web3Handler();
     })
 

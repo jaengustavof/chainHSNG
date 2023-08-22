@@ -45,7 +45,6 @@ export default function AddPropertyForm({handleClose}) {
                 const result = await client.add(file);
                 console.log(result);
                 setImage(`https://gustest.infura-ipfs.io/ipfs/${result.path}`);
-                console.log(image)
             } catch (error) {
                 console.log("ipfs image upload error: ", error);
                 

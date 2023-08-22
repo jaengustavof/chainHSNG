@@ -1,0 +1,12 @@
+@import '../../styles/general.scss';
+
+#buy-section {
+    width: 100%;
+    display: flex;
+    padding: 0 20px 20px;
+    background-color: $light-grey;
+    .buy-section-results {
+        width: calc(100% - 300px);
+        padding: 180px 3% 0;
+    }
+}

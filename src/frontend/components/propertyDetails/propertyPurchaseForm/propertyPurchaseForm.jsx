@@ -1,12 +1,14 @@
 import React from 'react';
-import { useState } from 'react';
+import { useEffect, useContext, useState } from 'react';
 import './propertyPurchaseForm.scss';
 import { useForm } from "react-hook-form";
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
 import TokenIcon from '@mui/icons-material/Token';
 import Context from '../../../context';
-import { useEffect, useContext } from 'react';
+import chainHousingAbi from '../../../contractsData/chainHousing.json';
+import chainHousingAddress from '../../../contractsData/chainHousing-address.json';
+import Web3 from 'web3';
 
 const marks = [
     {
@@ -32,15 +34,45 @@ const PropertyPurchaseForm = () => {
 
     const [totalPrice, setTotalPrice] = useState(0);
     const [monthRent, setMonthRent] = useState(0);
-    const {selectedProperty} = useContext(Context);
+    const {chainHousing, provider,selectedProperty, userAccount} = useContext(Context);
+
+    const web3 = new Web3(window.ethereum);
 
     const {
         register,
         handleSubmit,
         formState: { errors },
       } = useForm()
+
+      const buyProperty = async (propertyId, shares) => {
+        try {
+            const propertyIdNumber = parseInt(propertyId);
+            const sharesNumber = parseInt(shares);
+
+            const gasPrice = await web3.eth.getGasPrice(); // Get the current gas price
+            const gasLimit = 300000; // Set an appropriate gas limit
+
+            const contract = new web3.eth.Contract(chainHousingAbi.abi, chainHousingAddress.address);
+
+            const transaction = await contract.methods.buyProperty(propertyIdNumber, sharesNumber).send({
+                from: userAccount,
+                gasPrice: gasPrice,
+                gas: gasLimit
+            });
+
+            console.log('Transaction hash:', transaction.transactionHash);
+            // Perform any further actions after the transaction, such as updating balances or UI state
+        } catch (error) {
+            console.error('Error buying property:', error);
+        }
+    };
     
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = (data) => {
+        const propertyId = selectedProperty.propertyId;
+        const shares = data.shares;
+        
+        buyProperty(propertyId.toString(), shares);
+    }
 
     const optionChange = (e) => {
         const price = (selectedProperty.price).toString(); //TODO: Change to real value

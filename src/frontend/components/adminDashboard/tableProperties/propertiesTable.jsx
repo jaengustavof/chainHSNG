@@ -11,6 +11,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import IconButton from '@mui/material/IconButton';
 import { useState, useEffect, useContext } from 'react';
 import Context from '../../../context';
+import Web3 from 'web3';
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
 
@@ -48,9 +49,12 @@ const StyledTableCell = styled(TableCell)(({ theme }) => ({
   const { chainHousing, contractBalance, setContractBalance, tokenBalance, setTokenBalance, propertyList } = useContext(Context);
   const [tableRows, setTableRows] = useState(0)
 
+  const web3 = new Web3(window.ethereum);
+
   const loadInfo = async () =>{
 
-    let contractBalance = await chainHousing.getContractEthBalance();
+    let contractBalance = await web3.eth.getBalance(chainHousing.address)
+        contractBalance = web3.utils.fromWei(contractBalance, 'ether');
     let tokenBalance = await chainHousing.balanceOf();
 
     contractBalance = (+contractBalance).toFixed(2);
