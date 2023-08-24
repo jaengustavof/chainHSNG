@@ -38,7 +38,7 @@ function App() {
     const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
     setuserAccount(accounts[0]);
     
-    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    const provider = new ethers.providers.JsonRpcProvider('http://127.0.0.1:7545');
     setProvider(provider);
     
     const signer = provider.getSigner();
